@@ -28,5 +28,5 @@ Infertata este facut cu ajutorul HTML/CSS, ea se modifica de fiecare data cand a
 scriem ce vrem sa avem intr-o casuta de tip text si apasam enter, stergerea se face prin intermediul unui un buton, ce este 
 plasat in dreptul fiecarui item din lista, iar pentru marcarea listei ca completet avem cate un checkbox in stanga fiecarui item.
 
-
+Sper sa fi respectat toate cerintele cerute.
 
