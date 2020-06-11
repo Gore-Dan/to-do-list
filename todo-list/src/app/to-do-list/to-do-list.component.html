@@ -1,0 +1,22 @@
+<div class="containerwrapper">
+<div class="position">
+    <header class="header">
+      <h1>To Do List</h1>
+      <div >
+      <input class="resizedInput" placeholder="" autofocus="" [(ngModel)]="TodoObject.text" (keyup.enter)="add()">
+       </div>
+    </header>
+    <div class="listSize" *ngIf="todoArray.length > 0">
+      <ul >
+        <li *ngFor="let todo of todoArray" [class.completed]="todo.complete">
+          <div class="displayElement">
+            <input class="listBox" type="checkbox" (click)="listComplete(todo)" [checked]="todo.complete">
+            <label>{{todo.text}}</label>
+            <button class="bt" (click)="remove(todo)"> Delete</button>
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+</div>
+</div>
