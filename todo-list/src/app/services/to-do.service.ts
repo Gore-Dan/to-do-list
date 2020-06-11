@@ -14,36 +14,33 @@ export class ToDoService {
     this.currentId = 0;
   }
 
-  add(todoElement: ToDoListClass): ToDoService {
+  add(todoElement: ToDoListClass) {
     if (!todoElement.id) {
       todoElement.id = ++this.currentId;
     }
     this.toDoArray.push(todoElement);
-    return this;
-  }
+   }
 
   
-  deleteById(id: number): ToDoService {
+  deleteById(id: number) {
     this.toDoArray = this.toDoArray
       .filter(element => element.id !== id);
-    return this;
-  }
-
-   updateById(id: number, value: Object = {}): ToDoListClass { 
-    let toDoElement = this.getById(id);
-
-    Object.assign(toDoElement, value);
-    return toDoElement;
+    
   }
 
   listCompleted(toDoElement: ToDoListClass){
     let updated = this.updateById(toDoElement.id, {
       completed: !toDoElement.completed
     });
-
     return updated;
   }
 
+  updateById(id: number, value: Object = {}) { 
+    let toDoElement = this.getById(id);
+
+    Object.assign(toDoElement, value);
+  }
+  
   getAll(): ToDoListClass[] {
     return this.toDoArray;
   }

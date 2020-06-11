@@ -17,6 +17,7 @@ export class ToDoListComponent implements OnInit {
   add() {
     this.todoService.add(this.TodoObject);
     this.TodoObject = new ToDoListClass();
+    
   }
 
   remove(todo) {
@@ -25,7 +26,7 @@ export class ToDoListComponent implements OnInit {
 
   listComplete(todoElement) {
     this.todoService.listCompleted(todoElement);
-  }
+  } 
 
   get todoArray() {
     return this.todoService.getAll();
